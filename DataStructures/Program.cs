@@ -10,7 +10,8 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            RunBinarySearchTree();
+            //RunBinarySearchTree();
+            RunMinHeap();
             Console.ReadKey();
         }
 
@@ -40,6 +41,23 @@ namespace DataStructures
             myGraph.AddEdge(4, 5);
             //myGraph.BreadthFirstTraversal(5);
             myGraph.DepthFirstTraversal(0);
+        }
+
+        private static void RunMinHeap()
+        {
+            var minHeap = new MinHeap(11);
+            minHeap.InsertKey(3);
+            minHeap.InsertKey(2);
+            minHeap.DeleteKey(1);
+            minHeap.InsertKey(15);
+            minHeap.InsertKey(5);
+            minHeap.InsertKey(4);
+            minHeap.InsertKey(45);
+            minHeap.MinHeapify(0);
+            Console.WriteLine(minHeap.ExtractMin().ToString());
+            Console.WriteLine(minHeap.GetMin());
+            minHeap.DecreaseKey(2, 1);
+            Console.WriteLine(minHeap.GetMin());
         }
     }
 }
