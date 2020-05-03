@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgorithms.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{0BB32960-3AA7-4557-8080-3E3B650C0572}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherConcepts", "OtherConcepts\OtherConcepts.csproj", "{B203CABE-BB43-433C-BA98-38417A233F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneProgramADay", "OneProgramADay\OneProgramADay.csproj", "{2708CB2E-1196-4A37-8367-D7FFB8533EBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,14 @@ Global
 		{0BB32960-3AA7-4557-8080-3E3B650C0572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB32960-3AA7-4557-8080-3E3B650C0572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB32960-3AA7-4557-8080-3E3B650C0572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B203CABE-BB43-433C-BA98-38417A233F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B203CABE-BB43-433C-BA98-38417A233F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B203CABE-BB43-433C-BA98-38417A233F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B203CABE-BB43-433C-BA98-38417A233F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2708CB2E-1196-4A37-8367-D7FFB8533EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2708CB2E-1196-4A37-8367-D7FFB8533EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2708CB2E-1196-4A37-8367-D7FFB8533EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2708CB2E-1196-4A37-8367-D7FFB8533EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

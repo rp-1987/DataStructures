@@ -72,7 +72,7 @@ namespace ArrayPrograms.UnitTests
             var output = arrayRotation.Rotate(inputArray, 2);
 
             //Assert
-            Assert.IsTrue(expectedArray.Equals(output));
+            Assert.IsTrue(expectedArray.IsArrayEqual(output));
         }
 
         [TestMethod]
@@ -103,6 +103,35 @@ namespace ArrayPrograms.UnitTests
             //Assert
             Assert.IsFalse(output);
 
+        }
+
+        [TestMethod]
+        public void RearrangeOddWithPrecedingEvenIndex_InputArrayIsSorted_ReturnsInput()
+        {
+            //Arrange
+            ArrayRotation arrayRotation = new ArrayRotation();
+            int[] inputArray = new int[5] { 1, 2, 3, 4, 5 };
+
+            //Act
+            var output = arrayRotation.RearrangeOddWithPrecedingEvenIndex(inputArray);
+
+            //Assert
+            Assert.IsTrue(output.Equals(inputArray));
+        }
+
+        [TestMethod]
+        public void RearrangeOddWithPrecedingEvenIndex_InputArrayIsUnsorted_ReturnsEvenIndexLessThanOddIndex()
+        {
+            //Arrange
+            ArrayRotation arrayRotation = new ArrayRotation();
+            int[] inputArray = new int[5] { 5, 4, 3, 2, 1 };
+            int[] expectedOutput = new int[5] { 4, 5, 2, 3, 1 };
+
+            //Act
+            var output = arrayRotation.RearrangeOddWithPrecedingEvenIndex(inputArray);
+
+            //Assert
+            Assert.IsTrue(output.IsArrayEqual(expectedOutput));
         }
 
     }

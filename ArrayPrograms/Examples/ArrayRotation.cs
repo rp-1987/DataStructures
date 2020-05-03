@@ -20,15 +20,15 @@ namespace ArrayPrograms.Examples
 
             if (inputArray == null || inputArray.Length == 0)
             {
-                throw new ArgumentNullException("inputArray", "Input Array cannot be null or empty");
+                throw new ArgumentNullException(nameof(inputArray), "Input Array cannot be null or empty");
             }
             else if (d == 0)
             {
-                throw new ArgumentNullException("d", "d cannot be zero");
+                throw new ArgumentNullException(nameof(d), "d cannot be zero");
             }
             else if (d >= inputArray.Length)
             {
-                throw new ArgumentOutOfRangeException("d", "Rotation value should be less than array length");
+                throw new ArgumentOutOfRangeException(nameof(d), "Rotation value should be less than array length");
             }
             else
             {
@@ -72,16 +72,35 @@ namespace ArrayPrograms.Examples
             if (sum == 0)
                 throw new ArgumentException("Sum cannot be null");
 
-            for(int i = 0; i < inputArray.Length; i++)
+            for (int i = 0; i < inputArray.Length; i++)
             {
-                for(int j = i+1; j < inputArray.Length; j++)
+                for (int j = i + 1; j < inputArray.Length; j++)
                 {
                     if (inputArray[i] + inputArray[j] == sum)
-                        return true;                    
+                        return true;
                 }
             }
             return false;
         }
 
+        /*
+         * Given an unsorted array arr of size N, rearrange the elements of array such that number 
+         * at the odd index is greater than the number at the previous even index. The task is to 
+         * complete the function formatArray() which will return formatted array.
+         * Eg: 5 4 3 2 1   --> 4 5 2 3 1
+         */
+        public int[] RearrangeOddWithPrecedingEvenIndex(int[] inputArray)
+        {            
+            for(int i = 1; i < inputArray.Length; i = i+2)
+            {
+                if(inputArray[i-1] > inputArray[i])
+                {
+                    var temp = inputArray[i - 1];
+                    inputArray[i - 1] = inputArray[i];
+                    inputArray[i] = temp;
+                }
+            }
+            return inputArray;
+        }
     }
 }
